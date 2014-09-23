@@ -116,8 +116,7 @@ public class fragmentSorular extends Fragment {
 				lvSorular.setOnItemClickListener(new OnItemClickListener() {
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
-						Toast.makeText(getActivity(), "sa", Toast.LENGTH_LONG)
-								.show();
+						
 						Soru soru = sorular.get(arg2);
 						Bundle bundle = new Bundle();
 						bundle.putSerializable("soru", soru);

@@ -49,13 +49,13 @@
 
             <ImageView
                 android:id="@+id/dogru"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/Asagi_ok"
                 android:layout_marginBottom="7dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/thick" />
         </RelativeLayout>
     </RelativeLayout>

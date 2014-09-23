@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.samsungsorucevap.ConvertStreamToString;
 import com.example.samsungsorucevap.Helper;
@@ -39,6 +41,7 @@ public class fragmentSoruCevaplari extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+
 		return inflater.inflate(R.layout.fragment_soru_cevaplari, container,
 				false);
 	}
@@ -46,6 +49,19 @@ public class fragmentSoruCevaplari extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
+		Bundle args = getArguments();
+		Soru soru = (Soru) args.getSerializable("soru");
+
+		TextView tvBaslik = (TextView) getActivity().findViewById(
+				R.id.txtSoruBaslik);
+		TextView tvIcerik = (TextView) getActivity().findViewById(
+				R.id.txtIcerik);
+		TextView tvPuan = (TextView) getActivity().findViewById(R.id.txtPuan);
+
+		tvBaslik.setText(soru.getBaslik());
+		tvIcerik.setText(soru.getIcerik());
+		tvPuan.setText(Integer.toString(soru.getPuan()));
+
 		cevaplar = new ArrayList<Cevap>();
 		lvCevaplar = (ListView) getActivity().findViewById(R.id.lvCevaplar);
 		new DownloadCevapJson().execute();
@@ -104,6 +120,8 @@ public class fragmentSoruCevaplari extends Fragment {
 							.getString("Puan").toString()));
 					cevap.setUyeAd(jsonArray.getJSONObject(i)
 							.getString("UyeAd").toString());
+					cevap.setDogruCevap(Boolean.parseBoolean(jsonArray.getJSONObject(i)
+							.getString("DogruCevap")));
 					cevaplar.add(cevap);
 				}
 				CevaplarAdapter adapter = new CevaplarAdapter(getActivity()
