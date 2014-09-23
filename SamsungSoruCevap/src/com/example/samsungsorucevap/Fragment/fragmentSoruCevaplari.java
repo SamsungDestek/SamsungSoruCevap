@@ -43,6 +43,7 @@ public class fragmentSoruCevaplari extends Fragment {
 		return inflater.inflate(R.layout.fragment_soru_cevaplari, container, false);
 		
 		
+		
 	}
 
 	@Override
