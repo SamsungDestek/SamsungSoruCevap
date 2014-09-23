@@ -53,37 +53,45 @@ public final class R {
     }
     public static final class id {
         public static final int Asagi_ok=0x7f09000b;
-        public static final int Balon=0x7f090013;
-        public static final int Etiket1=0x7f090016;
-        public static final int Etiket2=0x7f090017;
-        public static final int Etiket3=0x7f090018;
+        public static final int Balon=0x7f09001e;
+        public static final int CevaplarAyrac=0x7f090019;
+        public static final int Etiket1=0x7f090015;
+        public static final int Etiket2=0x7f090016;
+        public static final int Etiket3=0x7f090017;
         public static final int Header=0x7f090000;
         public static final int Menu=0x7f090001;
         public static final int Saat=0x7f09000f;
         public static final int SolKutu=0x7f090008;
         public static final int YukariOk=0x7f090009;
-        public static final int action_settings=0x7f090019;
+        public static final int action_settings=0x7f090020;
         public static final int btnFavorilerim=0x7f090003;
         public static final int btnFilitreleme=0x7f090005;
         public static final int btnProfil=0x7f090006;
         public static final int btnSoruSor=0x7f090002;
         public static final int btnSorularim=0x7f090004;
+        public static final int cevaplar=0x7f09001a;
         public static final int dogru=0x7f09000c;
-        public static final int etiket=0x7f090015;
+        public static final int etiket=0x7f090014;
+        public static final int favori=0x7f090012;
         public static final int fragment1=0x7f090007;
-        public static final int listView1=0x7f090011;
+        public static final int listView1=0x7f09001c;
+        public static final int lvCevaplar=0x7f09001b;
         public static final int soru=0x7f09000d;
-        public static final int txtCevapSayisi=0x7f090012;
+        public static final int soruDetay=0x7f090018;
+        public static final int txtCevapSayisi=0x7f09001d;
         public static final int txtIcerik=0x7f09000e;
         public static final int txtKisi=0x7f090010;
         public static final int txtPuan=0x7f09000a;
-        public static final int txtSoru=0x7f090014;
+        public static final int txtSoru=0x7f09001f;
+        public static final int txtSoruBaslik=0x7f090013;
+        public static final int ustTaraf=0x7f090011;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
         public static final int cevap_list_view_item=0x7f030001;
-        public static final int fragment_sorular=0x7f030002;
-        public static final int soru_list_view_item=0x7f030003;
+        public static final int fragment_soru_cevaplari=0x7f030002;
+        public static final int fragment_sorular=0x7f030003;
+        public static final int soru_list_view_item=0x7f030004;
     }
     public static final class menu {
         public static final int home=0x7f080000;
