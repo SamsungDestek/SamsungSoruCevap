@@ -26,6 +26,9 @@ import org.json.JSONException;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.AdapterView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 public class fragmentSorular extends Fragment {
@@ -110,10 +113,26 @@ public class fragmentSorular extends Fragment {
 				SorularAdapter adapter = new SorularAdapter(getActivity()
 						.getBaseContext(), sorular);
 				lvSorular.setAdapter(adapter);
+				lvSorular.setOnItemClickListener(new OnItemClickListener() {
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int arg2, long arg3) {
+						Toast.makeText(getActivity(), "sa", Toast.LENGTH_LONG)
+								.show();
+						Soru soru = sorular.get(arg2);
+						Bundle bundle = new Bundle();
+						bundle.putSerializable("soru", soru);
+						Fragment cevapFragment = new fragmentSoruCevaplari();
+						cevapFragment.setArguments(bundle);
+						getFragmentManager().beginTransaction()
+								.replace(R.id.fragment1, cevapFragment,"cevapFragment")
+								.commit();
+					}
+				});
 			} catch (JSONException e) {
 				Log.e("Hata", e.getMessage());
 			}
 		}
 
 	}
+
 }
