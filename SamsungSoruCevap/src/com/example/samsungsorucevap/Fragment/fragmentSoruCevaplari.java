@@ -42,6 +42,7 @@ public class fragmentSoruCevaplari extends Fragment {
 			Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.fragment_soru_cevaplari, container, false);
 		
+		
 	}
 
 	@Override
